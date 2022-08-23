@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Main.cs" type="Script" id=1]
+[ext_resource path="res://Floor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Baby.tscn" type="PackedScene" id=3]
+
+[node name="Main" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Floor" parent="." instance=ExtResource( 2 )]
+position = Vector2( 537, 589 )
+scale = Vector2( 5, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Baby" parent="." instance=ExtResource( 3 )]
+position = Vector2( 100, 100 )
+
+[node name="Floor2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -3.00002, 296 )
+rotation = 1.5708
+scale = Vector2( 5, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Floor3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 515, 20 )
+scale = Vector2( 5, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Floor4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1034, 279 )
+rotation = 1.5708
+scale = Vector2( 5, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FPSDisplay" type="Label" parent="."]
+margin_left = 522.0
+margin_top = 103.0
+margin_right = 562.0
+margin_bottom = 117.0
+text = "Sup"
+
+[node name="InstanceCount" type="Label" parent="."]
+margin_left = 54.0
+margin_top = 64.0
+margin_right = 94.0
+margin_bottom = 78.0
+text = "Count"

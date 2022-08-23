@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Baby.cs" type="Script" id=1]
+
+[node name="Baby" type="RigidBody2D"]
+gravity_scale = 0.0
+can_sleep = false
+linear_damp = 0.0
+script = ExtResource( 1 )

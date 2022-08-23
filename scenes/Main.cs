@@ -3,7 +3,7 @@ using System;
 
 public class Main : Node
 {
-	static PackedScene babyScene = GD.Load<PackedScene>("res://Baby.tscn");
+	static PackedScene babyScene = GD.Load<PackedScene>("res://scenes/Baby.tscn");
 
 	private int instanceCount = 0;
 	// Declare member variables here. Examples:

@@ -110,6 +110,15 @@ public class ConvexPolygon // TODO: Investigate class vs struct in C#
         return new ConvexPolygon(points);
     }
 
+    // Alternate constructor for a ConvexPolygon. Will create a random ConvexPolygon within the specified
+    // bounding box. Bounding box will be a square with corners of ((min, min), (max, max)).
+    // The ConvexPolygon will have a number of distinct vertices in the range [3, maxVertices].
+    // It will have vertices+1 points because the first and last points are the same.
+    public static ConvexPolygon RandomPolygon(float min, float max, int maxVertices)
+    {
+        return RandomPolygon(new Vector2(min, min), new Vector2(max, max), maxVertices);
+    }
+
     /// Creates a string with the points in parentheses.
     /// Example: "((-2.7, -3.3), (-0.7, -1.3), (3.3, 4.7), (-2.7, -3.3))"
     /// Rounded to one decimal place.

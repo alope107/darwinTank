@@ -44,9 +44,7 @@ public class Baby : RigidBody2D
 
     private void createGeometry()
     {
-        ConvexPolygon polygonData = ConvexPolygon.RandomPolygon(new Vector2(-10, -10),
-                                         new Vector2(10, 10),
-                                        10);
+        ConvexPolygon polygonData = ConvexPolygon.RandomPolygon(-10, 10, 10);
 
         Vector2[] points = polygonData.Points;
 

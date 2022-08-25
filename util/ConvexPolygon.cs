@@ -6,7 +6,7 @@ using System;
 /// It is NOT a game node, it only performs calculations and holds
 /// data for nodes to use.
 /// </summary>
-public class ConvexPolygon
+public class ConvexPolygon // TODO: Investigate class vs struct in C#
 {
 
     // Vertices of the Polygon in counter-clockwise order.

@@ -28,5 +28,23 @@ namespace GdUnitDefaultTestNamespace
 
             AssertFloat(diff).IsLess(tolerance);
         }
+
+        [TestCase]
+        public void toString()
+        {
+            ConvexPolygon polygon = new ConvexPolygon(new Vector2[]{
+                new Vector2(1f, 2f),
+                new Vector2(3f, 4f),
+                new Vector2(7f, 10f),
+                new Vector2(1f, 2f),
+            });
+
+            string actual = polygon.ToString();
+            string expected = "((-2.7, -3.3), (-0.7, -1.3), (3.3, 4.7), (-2.7, -3.3))";
+
+            AssertString(actual).IsEqual(expected);
+        }
     }
+
+
 }

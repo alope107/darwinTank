@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Linq;
 
 /// <summary>
 /// ConvexPolygon models the geometry of a 2D convex polygon.
@@ -107,5 +108,13 @@ public class ConvexPolygon // TODO: Investigate class vs struct in C#
         }
 
         return new ConvexPolygon(points);
+    }
+
+    /// Creates a string with the points in parentheses.
+    /// Example: "((-2.7, -3.3), (-0.7, -1.3), (3.3, 4.7), (-2.7, -3.3))"
+    /// Rounded to one decimal place.
+    public override string ToString()
+    {
+        return $"({String.Join(", ", Points.Select(point => $"({point.x:0.#}, {point.y:0.#})"))})";
     }
 }
